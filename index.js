@@ -165,8 +165,7 @@ function lockTetromino() {
           board[row][col] = currentTetromino.color;
           
           if (row === 0) {
-            alert("¡Juego terminado! Se ha llenado la parte superior.");
-            clearInterval(timerInterval);
+            showAlert(rowsScore);
             return;
           }
         }
@@ -181,7 +180,12 @@ function lockTetromino() {
     // Crear un nuevo tetromino
     currentTetromino = randomTetromino();
   }
-  
+
+  function showAlert(rowsScore) {
+    document.getElementById('customAlert').classList.remove('hidden');
+    document.getElementById('alertScore').innerHTML = rowsScore;
+}
+
   function updateScore(rowsCleared) {
     const point = pointsTotal.find(p => p.id === rowsCleared);
     
@@ -189,7 +193,6 @@ function lockTetromino() {
         rowsScore += point.points;
     }
     
-    console.log(rowsScore);
     document.getElementById("score").innerHTML = rowsScore;
 }
 
