@@ -7,11 +7,22 @@
     <title>Game Tetris</title>
 </head>
 <body>
-    <div class="game_board_wrap">
-        <img src="./assets/imagenTetris.png" alt="" class="logo">
-        <div id="game_board"></div>
-        <div class="scorePoint">SCORE: <span id="score"></span> </div>
+    <div class="game">
+        <div class="game_board_wrap">
+            <img src="./assets/imagenTetris.png" alt="" class="logo">
+            <div id="game_board"></div>
+            <div class="scorePoint">SCORE: <span id="score"></span> </div>
+        </div>
+
+        <div class="points">
+            <p class="info_points">POINTS:</p> 
+            <p class="info_points">1 line : 10 points</p> 
+            <p class="info_points">2 line : 26 points</p> 
+            <p class="info_points">3 line : 42 points</p> 
+            <p class="info_points">4 line : 58 points</p> 
+        </div>
     </div>
+    
     <div id="customAlert" class="alert hidden">
         <div class="alert-content">
             <h2>¡Game Over!</h2>
